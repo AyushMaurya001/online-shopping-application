@@ -1,26 +1,41 @@
-import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
-} from "@/components/ui/carousel"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, } from "@/components/ui/carousel"
+import { useState } from "react";
 
-export default function HeaderPosters() {
+export default function HeaderPosters({ className }) {
+
+  const [buttonVisible, setButtonVisible] = useState(false);
+
+  const headerPosters = [{
+    imageLink: "https://overlays.co/cdn/shop/files/summertdek.jpg?v=1707375929&width=2000"
+  }, {
+    imageLink: "https://overlays.co/cdn/shop/files/summertdek.jpg?v=1707375929&width=2000"
+  }, {
+    imageLink: "https://overlays.co/cdn/shop/files/summertdek.jpg?v=1707375929&width=2000"
+  }, {
+    imageLink: "https://overlays.co/cdn/shop/files/summertdek.jpg?v=1707375929&width=2000"
+  }, {
+    imageLink: "https://overlays.co/cdn/shop/files/summertdek.jpg?v=1707375929&width=2000"
+  }, {
+    imageLink: "https://overlays.co/cdn/shop/files/summertdek.jpg?v=1707375929&width=2000"
+  }, {
+    imageLink: "https://overlays.co/cdn/shop/files/summertdek.jpg?v=1707375929&width=2000"
+  }, ]
+
   return (
-    <div className=" bg-muted py-3 w-full h-72 flex justify-center items-center" >
-        <div className=" bg-background w-full h-64 flex justify-center items-center">
-            <Carousel className='w-11/12 h-60 rounded-sm'>
-                <CarouselContent className='h-60 bg-red-500' >
-                    <CarouselItem className=' bg-yellow-400'></CarouselItem>
-                    <CarouselItem className=' bg-red-500'></CarouselItem>
-                    <CarouselItem className='bg-pink-500'></CarouselItem>
-                    <CarouselItem className='bg-black'></CarouselItem>
-                </CarouselContent>
-                <CarouselPrevious className=' h-full rounded-sm w-10' />
-                <CarouselNext className=' h-full rounded-sm w-10' />
-            </Carousel>
-        </div>
+    <div className={` bg-background h-64 flex justify-center items-center ${className} `} onMouseEnter={() => {
+        setButtonVisible(true);
+    }} onMouseLeave={() => {
+        setButtonVisible(false);
+    }}>
+      <Carousel className='w-[96%] h-60'>
+        <CarouselContent className='h-60' >
+          {headerPosters.map((poster) => (<CarouselItem className=" bg-cover bg-no-repeat " style={{
+            backgroundImage: `url(${poster.imageLink})`
+          }}></CarouselItem>))}
+        </CarouselContent>
+        <CarouselPrevious className={` w-14 h-14 rounded-none border-2 -left-7 ${buttonVisible===false?" hidden":""} `} />
+        <CarouselNext className={` w-14 h-14 rounded-none border-2 -right-7 ${buttonVisible===false?" hidden":""} `} />
+      </Carousel>
     </div>
   )
 }
