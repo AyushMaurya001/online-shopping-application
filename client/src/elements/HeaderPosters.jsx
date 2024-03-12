@@ -1,5 +1,6 @@
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, } from "@/components/ui/carousel"
 import { useState } from "react";
+import Autoplay from "embla-carousel-autoplay"
 
 export default function HeaderPosters({ className }) {
 
@@ -27,7 +28,12 @@ export default function HeaderPosters({ className }) {
     }} onMouseLeave={() => {
         setButtonVisible(false);
     }}>
-      <Carousel className='w-[96%] h-60'>
+      <Carousel className='w-[96%] h-60' plugins={[
+        Autoplay({
+          delay: 5000,
+          stopOnInteraction: false,
+        }),
+      ]}>
         <CarouselContent className='h-60' >
           {headerPosters.map((poster) => (<CarouselItem className=" bg-cover bg-no-repeat " style={{
             backgroundImage: `url(${poster.imageLink})`

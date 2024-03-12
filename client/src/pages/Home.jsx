@@ -20,9 +20,9 @@ export default function Home() {
                 <ProductList title="Hoodies" className=" w-full h-[800px]" />
             </div>
 
-            {/* <ColorChart /> */}
             <CategorySection />
             <FeatureSection />
+            {/* <ColorChart /> */}
             <Footer />
         </div>
     )

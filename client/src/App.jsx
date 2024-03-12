@@ -1,5 +1,5 @@
 import { Outlet, Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from "react-router-dom"
-import { Home, Login, Signup } from "./pages"
+import { Home, Login, Product, Signup } from "./pages"
 
 function App() {
 
@@ -9,6 +9,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
+        <Route path='/product' element={<Product />} />
       </Route>
     )
   )

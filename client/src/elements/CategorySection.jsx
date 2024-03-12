@@ -28,7 +28,7 @@ export default function CategorySection(){
 
     return (
         <div className=" w-full">
-            <SectionTitle title="Categories" className=" my-10 w-full text-center" />
+            <SectionTitle title="Categories" className=" my-10 w-full text-center" titleClassName=" cursor-pointer" onClick="/category" />
             <div className=" px-[93px] w-full flex flex-wrap justify-start items-center gap-9">
                 {categories.map((category) => <BasicCard title={category.title} imageLink={category.imageLink} />)}
             </div>

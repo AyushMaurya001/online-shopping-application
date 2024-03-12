@@ -148,7 +148,7 @@ export default function ProductList({ className, title }){
     const [buttonVisible, setButtonVisible] = useState(false);
 
     return (
-        <div className={` relative h-full w-[450px] px-10 flex flex-col items-center overflow-y-hidden hide-scrollbar `} onMouseEnter={() => {
+        <div className={` relative h-full w-[450px] px-10 flex flex-col items-center overflow-hidden `} onMouseEnter={() => {
             setButtonVisible(true);
         }} onMouseLeave={() => {
             setButtonVisible(false);
