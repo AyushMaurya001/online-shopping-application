@@ -1,6 +1,10 @@
 name = "server"
 compatibility_date = "2023-12-01"
 
+[vars]
+DATABASE_URL="prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiYzA4MTYyZDUtMGQxZS00ZTg4LWIzMjItMDQ4MmQzODhlZjA0IiwidGVuYW50X2lkIjoiMmNiNzVlMzQzMjc3MTk4MGViNTJiNWI4MWNkMTg1NTQyOWYwNTkxZmU3MDFiM2QxNjhiNDkyOGMzMWNmY2ViMCIsImludGVybmFsX3NlY3JldCI6IjgzYTI2NzQyLTg4YjAtNDQzZC05OGVjLWRkMjhlYTNiMDE2ZSJ9.MlU4o06KQRQRhkPlNxz0blqh3iLiUweVGF3vhujNnuQ"
+JWT_SECRET="online-shopping-application-secret-password"
+
 # [vars]
 # MY_VARIABLE = "production_value"
 

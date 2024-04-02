@@ -1,11 +1,19 @@
-import Home from "./Home";
-import Signup from "./Signup";
-import Login from "./Login";
-import Product from "./Product";
+import {Home} from "./Home";
+import {CustomerSignup} from "./CustomerSignup";
+import {CustomerSignin} from "./CustomerSignin";
+import {SellerSignup} from "./SellerSignup";
+import {SellerSignin} from "./SellerSignin";
+import SellerDashboard from "./SellerDashboard";
+import SellerAddProduct from "./SellerAddProduct";
+import ErrorElement from "./ErrorElement";
 
 export {
     Home,
-    Signup,
-    Login,
-    Product,
+    CustomerSignup,
+    CustomerSignin,
+    SellerSignup,
+    SellerSignin,
+    SellerDashboard,
+    SellerAddProduct,
+    ErrorElement,
 }
